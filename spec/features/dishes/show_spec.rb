@@ -9,7 +9,7 @@ RSpec.describe "As a visitor", type: :feature do
     ingredient3 = Ingredient.create(name: "Flour", calories: 150)
     dish1 = chef1.dishes.create(name: "Cookie", description: "Peanut Butter")
     cookie_ingredients = dish1.ingredients.create(dish: dish1.name, ingredients: [ingredient1, ingredient2, ingredient2])
-binding.pry
+    
     visit "dishes/#{dish1.id}"
     
     expect(page).to have_content("Chef Name: #{chef1.name}")

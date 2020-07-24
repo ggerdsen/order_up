@@ -1,2 +1,4 @@
-<!-- <p> Name: <%= @dish.chef.name %> </p>
-<p> Ingredients: <%= %> </p>
+<p> Name: <%= @dish.chef.name %> </p>
+<% @dish.ingredients.each do |ingredient| %>
+  <%= ingredient.name %>
+<% end %>
